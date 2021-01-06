@@ -53,7 +53,7 @@ textarea {
 }
 .stock {
   
-  transform: rotate(50deg);
+  transform: rotate(45deg);
   top: 200px;
   width: 18vw;
   color: white;

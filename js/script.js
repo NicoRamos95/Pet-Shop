@@ -1,4 +1,4 @@
-fetch('./js/data.json')
+fetch('https://apipetshop.herokuapp.com/api/articulos')
 .then(respuesta => respuesta.json())
 .then(data => { var data = data.response
         datos(data)}
@@ -74,7 +74,6 @@ function comprarProducto(e) {
     e.preventDefault();    
     if (e.target.classList.contains('agregar-carrito')) {
         setCarrito(e.target.parentElement)
-        console.log(e.target.parentElement)
     }
 }
 
@@ -90,7 +89,6 @@ function setCarrito(objeto) {
     if (carrito.hasOwnProperty(producto.id)) {
         producto.cantidad = carrito[producto.id].cantidad + 1
     }
-    console.log(producto)
     carrito[producto.id] = {...producto}
     pintarCarrito()
 
