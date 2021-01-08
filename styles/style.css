@@ -7,6 +7,11 @@ html * {
   font-family: 'Sniglet', cursive;
 
 }
+.ulti{
+  padding: 0 100px 0 100px;
+  border-radius: 100px;
+  background-color: #df3a36;
+}
 nav{
   font-size: 20px;
 }
@@ -34,11 +39,6 @@ nav{
   background-image: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, 0.6)),
   url('../img/fondo\ de\ patitas.jpg');
   background-size: cover;
-}
-.ulti-stock{
-  width: 70vw;
-  border-radius: 100px;
-  background-color: #df3a36;
 }
 .banner-marcas{
   border-top-left-radius: 200px 100px;
