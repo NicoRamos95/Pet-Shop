@@ -105,7 +105,6 @@ function pintarCarrito() {
 
         const clone =templateCarrito.cloneNode(true)
         fragment.appendChild(clone)
-        console.log(templateCarrito.querySelectorAll('td img')[0].src)
     })
     items.appendChild(fragment)
     pintarFooter()
