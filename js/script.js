@@ -48,7 +48,7 @@ function tarjeta(data, id, cantidad) {
             <div class="card-body cara">
                 <h5 class="card-title">${data[i].nombre}</h5>
                 <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img class="img-fluid img-card" src="${data[i].imagen}" id="data[i]._id">
+                    <img class="img-fluid img-card" src="${data[i].imagen}" id="${data[i]._id}">
                 </a>
                 <h6 class="card-text stock">${data[i].stock <= 5 ? `Ultimas unidades` : " "}</h6>
                 <p class="card-text m-2"><span>${data[i].precio}</span>$</p>
@@ -73,12 +73,11 @@ function tarjeta(data, id, cantidad) {
 function comprarProducto(e) {
     e.preventDefault();    
     if (e.target.classList.contains('agregar-carrito')) {
-        setCarrito(e.target.parentElement)
+        crearCarrito(e.target.parentElement)
     }
 }
 
-function setCarrito(objeto) {
-    console.log(objeto.querySelector('img'))
+function crearCarrito(objeto) {
     const producto = {
         id: objeto.querySelector('.agregar-carrito').id,
         title: objeto.querySelector('h5').textContent,
@@ -165,3 +164,24 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            console.log("aca")
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()

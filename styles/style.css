@@ -7,6 +7,9 @@ html * {
   font-family: 'Sniglet', cursive;
 
 }
+nav{
+  font-size: 20px;
+}
 .rojo{
   color: white;
   background-color: #df3a36;
@@ -18,13 +21,28 @@ html * {
 .rubik {
   font-family: 'Rubik', sans-serif;
 }
+.bg-farmacia{
+  background-image: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, 0.6)), url('../img/veterinaria2.jpg');
+  background-size: cover;
+}
+.bg-jugueteria {
+  background-image: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, 0.6)),
+  url('../img/jueguetes.jpg');
+  background-size: cover;
+}
 .bg {
   background-image: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, 0.6)),
-  url('../img/63530573-se-aceptan-las-patas-negras-sobre-fondo-blanco-patrón-transparente-.jpg');
-  background-repeat: repeat;
+  url('../img/fondo\ de\ patitas.jpg');
   background-size: cover;
-
 }
+.banner-marcas{
+  border-top-left-radius: 200px 100px;
+  border-top-right-radius: 200px 100px;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+}
+
 .bi-cart-check{
   color: black
 }
@@ -73,9 +91,20 @@ header h2{
 .card-title {
   height: 7vh;
 }
+.bg-form{
+  background-color: #df3a36;
+}
 form .btn { 
+  display: flex;
     padding: 10px 100px 10px 100px;
-    margin:  30px 0 0 30vw;
+}
+form .btn i {
+  font-size: 30px;
+  margin: 10px;
+}
+form .btn:hover {
+  z-index: 1;
+  transform: scale(1.1);
 }
 .redes {
   font-size: 50px;
@@ -83,11 +112,23 @@ form .btn {
 .redes .ig{
   color: #000000;
 }
+.redes .ig:hover{
+  z-index: 1;
+  transform: scale(1.5);
+}
 .redes .fb {
   color: #3b5998;
 }
+.redes .fb:hover{
+  z-index: 1;
+  transform: scale(1.5);
+}
 .redes .ws {
   color: #00bb2d;
+}
+.redes .ws:hover{
+  z-index: 1;
+  transform: scale(1.5);
 }
 
 /* footer */
@@ -143,7 +184,6 @@ background-color: #df3a36;
   width: 10vw;
 }
 .img-carousel {
-  height: 500px;
 }
 .ocultar {
   display: none
