@@ -15,7 +15,8 @@ function datos(data){
         tarjeta(arr, tarjetas, arr.length)
     }
     if (document.getElementById('inicio')) {
-        tarjeta(data, tarjetas, 3)
+        var promo = data.filter(stock => stock.stock < 5)
+        tarjeta(promo, tarjetas, 3)
     }
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -45,7 +46,7 @@ function tarjeta(data, id, cantidad) {
         var card = document.createElement('div');
         card.classList.add('card', 'col-sm-3');
         card.innerHTML = `
-            <div class="card-body cara">
+            <div class="card-body cara titulo">
                 <h5 class="card-title">${data[i].nombre}</h5>
                 <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img class="img-fluid img-card" src="${data[i].imagen}" id="${data[i]._id}">

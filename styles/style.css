@@ -35,6 +35,10 @@ nav{
   url('../img/fondo\ de\ patitas.jpg');
   background-size: cover;
 }
+.ulti-stock{
+  width: 50vw;
+  border-radius: 100px;
+}
 .banner-marcas{
   border-top-left-radius: 200px 100px;
   border-top-right-radius: 200px 100px;
